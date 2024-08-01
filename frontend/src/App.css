@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+* {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-optical-sizing: auto;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.ant-select-selector {
+    @apply bg-[#F3F6FD] dark:bg-dark dark:text-white text-black !important;
+}
+
+.languageSelect .ant-select-selector {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.sidebar .sidebar2 .ant-collapse-content-box {
+    @apply dark:bg-dark bg-white dark:text-white text-black !important;
+}
+
+.ant-select-arrow {
+    display: none !important;
+}
+
+/* ant design custom collapse */
+.sidebar .ant-collapse {
+    border: none !important;
+}
+
+.sidebar .ant-collapse .ant-collapse-content {
+    border-top: none !important;
+}
+
+.ant-collapse .ant-collapse-content>.ant-collapse-content-box {
+    padding: 6px 16px !important;
+}
+
+/* .sidebar .ant-collapse-header {
+    background-color: #fff !important;
+} */
+
+.sidebar .sidebar2 .ant-collapse-header {
+
+    @apply dark:bg-dark bg-[#687EFF] !important;
+    border-radius: 8px !important;
+    color: #fff !important;
+}
+
+
+.ant-collapse-header-text,
+.ant-drawer-content-wrapper {
+    @apply dark:text-white text-black !important;
+}
+
+.ant-drawer-content-wrapper .ant-drawer-content {
+    @apply dark:bg-dark bg-white !important;
+}
+
+
+/* styles.css */
+
+/* Table background */
+.ant-table {
+    @apply dark:bg-dark bg-[#FAFAFA] dark:text-white text-black !important;
+}
+
+/* Table header */
+.ant-table-thead>tr>th {
+    @apply dark:bg-[#444] bg-[#FAFAFA] dark:text-white text-black !important;
+
+}
+
+/* Table body */
+.ant-table-tbody>tr>td {
+    @apply dark:bg-[#444] bg-white dark:text-white text-black !important;
+}
+
+/* Table row hover */
+.ant-table-tbody>tr:hover>td {
+    @apply dark:bg-[#444] bg-white dark:text-white text-black !important;
+}
+
+/* Pagination */
+/* .ant-pagination-item,
+  .ant-pagination-item-link {
+    @apply dark:bg-[#444] bg-white dark:text-white text-black !important;
+    
+  } */
+
+/* .ant-pagination-item:hover,
+  .ant-pagination-item-link:hover {
+    @apply dark:bg-[#444] bg-white dark:text-white text-black !important;
+  } */
+
+/* .ant-pagination-item-active {
+    @apply dark:bg-[#444] bg-white dark:text-white text-black !important;
+    border-color: #555 !important;
+  } */
+
+/* Other necessary overrides */
+/* .ant-table-pagination.ant-pagination {
+    @apply dark:bg-[#444]  text-black !important;
+  }
+   */
+
+.ant-card {
+    @apply dark:bg-dark bg-white dark:text-white text-black !important;
+}
+
+.ant-picker {
+    @apply dark:bg-dark bg-white dark:text-white text-black !important;
+}
+
+.ant-card-head, .ant-row, .ant-col>label{
+    @apply dark:text-white text-black !important;
+}
