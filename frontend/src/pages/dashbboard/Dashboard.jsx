@@ -22,7 +22,7 @@ const Dashboard = () => {
 
   return (
     <div className="w-full bg-[#F3F6FD] dark:text-white dark:bg-[#202020] h-screen relative flex overflow-hidden">
-      {!isVerticalLayout && <div className={`${isClicked ? "w-[5%]" : "w-[14%]"} transition-all duration-300 ease-in-out bg-white dark:text-white dark:bg-dark hidden xl:flex shadow-md  flex-col h-full pb-4 pl-0 pr-4 ${isLarge ? " " : "overflow-y-auto"} no-scrollbar`}>
+      {!isVerticalLayout && <div className={`${isClicked ? "w-[5%]" : "w-[20%]"} transition-all duration-300 ease-in-out bg-white dark:text-white dark:bg-dark hidden xl:flex shadow-md  flex-col h-full pb-4 px-4 ${isLarge ? " " : "overflow-y-auto"} no-scrollbar`}>
         {!isLarge && <Sidebar isClicked={isClicked} />}
       </div>}
       <div className={`${isLarge ? "w-full" : "w-full"} flex flex-col h-full`}>

@@ -1,10 +1,11 @@
+import { BiSolidPurchaseTag } from "react-icons/bi";
 import { CgProfile } from "react-icons/cg";
-import { FaBlogger, FaUsers } from "react-icons/fa";
+import { FaUsers } from "react-icons/fa";
 import { HiOutlineCurrencyDollar, HiOutlineMail } from "react-icons/hi";
 import { IoMdNotifications, IoMdSettings } from "react-icons/io";
 import { IoBarChartSharp } from "react-icons/io5";
 import { LuShoppingCart } from "react-icons/lu";
-import { MdOutlineLogout, MdWidgets } from "react-icons/md";
+import { MdOutlineLogout, MdProductionQuantityLimits, MdWidgets } from "react-icons/md";
 import { RiDashboardHorizontalFill } from "react-icons/ri";
 import { TiContacts, TiTicket } from "react-icons/ti";
 import { VscDebugBreakpointDataUnverified } from "react-icons/vsc";
@@ -16,44 +17,171 @@ export const SidebarData = [
         icon: <RiDashboardHorizontalFill />,
     },
     {
-        title: "Tickets",
-        path: "/dashboard/tickets",
-        icon: <TiTicket />,
-        cName: "nav-text",
+        title: "Sell",
+        path: "/blogs",
+        icon: <BiSolidPurchaseTag />,
+        isDropdown: true,
+        subItems: [
+            {
+                title: "Sales List",
+                icon: <VscDebugBreakpointDataUnverified />,
+            },
+            {
+                title: "List POS",
+                icon: <VscDebugBreakpointDataUnverified />,
+            },
+            {
+                title: "POS Sale",
+                icon: <VscDebugBreakpointDataUnverified />,
+            },
+            {
+                title: "Draft List",
+                icon: <VscDebugBreakpointDataUnverified />,
+            },
+            {
+                title: "Quotation List",
+                icon: <VscDebugBreakpointDataUnverified />,
+            },
+            {
+                title: "Sales Return List",
+                icon: <VscDebugBreakpointDataUnverified />,
+            },
+            {
+                title: "Shipment",
+                icon: <VscDebugBreakpointDataUnverified />,
+            },
+            {
+                title: "Discount",
+                icon: <VscDebugBreakpointDataUnverified />,
+            },
+            {
+                title: "Import Sales",
+                icon: <VscDebugBreakpointDataUnverified />,
+            },
+        ]
     },
     {
-        title: "Chat",
-        path: "/dashboard/chat",
-        icon: <HiOutlineCurrencyDollar />,
-        cName: "nav-text",
+        title: "Products",
+        path: "/products",
+        icon: <MdProductionQuantityLimits />,
+        isDropdown: true,
+        subItems: [
+            {
+                title: "Product List",
+                path: "/dashboard/categories",
+                icon: <VscDebugBreakpointDataUnverified />,
+            },
+            {
+                title: "Print Labels",
+                path: "/dashboard/categories",
+                icon: <VscDebugBreakpointDataUnverified />,
+            },
+            {
+                title: "Variations",
+                path: "/dashboard/categories",
+                icon: <VscDebugBreakpointDataUnverified />,
+            },
+            {
+                title: "Import Opening Stock",
+                path: "/dashboard/categories",
+                icon: <VscDebugBreakpointDataUnverified />,
+            },
+            {
+                title: "Selling Price Group",
+                path: "/dashboard/categories",
+                icon: <VscDebugBreakpointDataUnverified />,
+            },
+            {
+                title: "Units",
+                path: "/dashboard/categories",
+                icon: <VscDebugBreakpointDataUnverified />,
+            },
+            {
+                title: "Categories",
+                path: "/dashboard/categories",
+                icon: <VscDebugBreakpointDataUnverified />,
+            },
+            {
+                title: "Brands",
+                path: "/brands",
+                icon: <VscDebugBreakpointDataUnverified />,
+            },
+            {
+                title: "Warranties",
+                path: "/brands",
+                icon: <VscDebugBreakpointDataUnverified />,
+            },
+        ]
     },
     {
-        title: "Form",
-        path: "/dashboard/form",
-        icon: <IoBarChartSharp />,
+        title: "Purchase",
+        path: "/blogs",
+        icon: <BiSolidPurchaseTag />,
+        isDropdown: true,
+        subItems: [
+            {
+                title: "Purchase List",
+                icon: <VscDebugBreakpointDataUnverified />,
+            },
+            {
+                title: "Return Purchase List",
+                icon: <VscDebugBreakpointDataUnverified />,
+            },
+        ]
     },
     {
-        title: "Table",
-        path: "/dashboard/table",
-        icon: <IoBarChartSharp />,
+        title: "Stock Transfer",
+        path: "/blogs",
+        icon: <BiSolidPurchaseTag />,
+        isDropdown: true,
+        subItems: [
+            {
+                title: "Post",
+                icon: <VscDebugBreakpointDataUnverified />,
+            },
+            {
+                title: "Details",
+                icon: <VscDebugBreakpointDataUnverified />,
+            },
+        ]
     },
     {
-        title: "Settings",
-        path: "/dashboard/settings",
-        icon: <IoMdSettings />,
-        cName: "nav-text",
+        title: "Stock Adjustment",
+        path: "/blogs",
+        icon: <BiSolidPurchaseTag />,
+        isDropdown: true,
+        subItems: [
+            {
+                title: "Post",
+                icon: <VscDebugBreakpointDataUnverified />,
+            },
+            {
+                title: "Details",
+                icon: <VscDebugBreakpointDataUnverified />,
+            },
+        ]
     },
     {
-        title: "Profile",
-        path: "/profile",
-        icon: <CgProfile />,
-        cName: "nav-text",
+        title: "Expense",
+        path: "/blogs",
+        icon: <BiSolidPurchaseTag />,
+        isDropdown: true,
+        subItems: [
+            {
+                title: "Expense List",
+                icon: <VscDebugBreakpointDataUnverified />,
+            },
+            {
+                title: "Expense Categories",
+                icon: <VscDebugBreakpointDataUnverified />,
+            },
+        ]
     },
 
     {
-        title: "Blogs",
+        title: "Reports",
         path: "/blogs",
-        icon: <FaBlogger />,
+        icon: <BiSolidPurchaseTag />,
         isDropdown: true,
         subItems: [
             {
@@ -68,72 +196,68 @@ export const SidebarData = [
     },
     {
         title: "Contacts",
-        path: "/contacts",
-        icon: <TiContacts />,
-        cName: "nav-text",
+        path: "/blogs",
+        icon: <BiSolidPurchaseTag />,
+        isDropdown: true,
+        subItems: [
+            {
+                title: "Suppliers",
+                icon: <VscDebugBreakpointDataUnverified />,
+            },
+            {
+                title: "Customers",
+                icon: <VscDebugBreakpointDataUnverified />,
+            },
+            {
+                title: "Customers Groups",
+                icon: <VscDebugBreakpointDataUnverified />,
+            },
+            {
+                title: "Import Contact",
+                icon: <VscDebugBreakpointDataUnverified />,
+            },
+        ]
     },
     {
-        title: "Ecommerce",
-        path: "/ecommerce",
-        icon: <LuShoppingCart />,
-        cName: "nav-text",
+        title: "User Management",
+        path: "/blogs",
+        icon: <BiSolidPurchaseTag />,
+        isDropdown: true,
+        subItems: [
+            {
+                title: "Post",
+                icon: <VscDebugBreakpointDataUnverified />,
+            },
+            {
+                title: "Details",
+                icon: <VscDebugBreakpointDataUnverified />,
+            },
+        ]
     },
     {
-        title: "Users",
+        title: "Settings",
         path: "/users",
         icon: <FaUsers />,
         cName: "nav-text",
         isDropdown: true,
         subItems: [
             {
-                title: "Profile",
+                title: "Business Setting",
                 icon: <FaUsers />,
             },
             {
-                title: "Follower",
+                title: "Business Location",
+                icon: <FaUsers />,
+            },
+            {
+                title: "Invoice Setting",
+                icon: <FaUsers />,
+            },
+            {
+                title: "Barcode Setting",
                 icon: <FaUsers />,
             },
         ]
-    },
-
-    {
-        title: "Email",
-        path: "/email",
-        icon: <HiOutlineMail />,
-        cName: "nav-text",
-    },
-    {
-        title: "Maintanence",
-        path: "/maintanence",
-        icon: <IoMdSettings />,
-        cName: "nav-text",
-    },
-    {
-        title: "Widgets",
-        path: "/widgets",
-        icon: <MdWidgets />,
-        cName: "nav-text",
-    },
-
-    {
-        title: "Pricing",
-        path: "/dashboard/pricing",
-        icon: <HiOutlineCurrencyDollar />,
-        cName: "nav-text",
-    },
-    {
-        title: "Charts",
-        path: "/charts",
-        icon: <IoBarChartSharp />,
-        cName: "nav-text",
-    },
-
-
-    {
-        title: "Notifications",
-        path: "/notifications",
-        icon: <IoMdNotifications />,
-        cName: "nav-text",
     },
 
     {

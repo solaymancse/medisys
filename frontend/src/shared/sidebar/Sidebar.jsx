@@ -45,9 +45,9 @@ const Sidebar = ({ isClicked, onClose }) => {
               >
                 <Panel
                   header={
-                    <div className={`flex gap-4   justify-start text-start items-center pl-[10px] rounded-lg`}>
+                    <div className={`flex gap-4 ${index.toString() === handleIsActiveIndex ? "text-white" : "text-black"} justify-start text-start items-center rounded-lg`}>
                       {item?.icon}
-                      {!isClicked && <p className="ml-1 text-sm">{item?.title}</p>}
+                      {!isClicked && <p className={`${index.toString() === handleIsActiveIndex ? "text-[#fff]" : "text-black"}`}>{item?.title}</p>}
                     </div>
                   }
                   key={index.toString()}
@@ -57,10 +57,10 @@ const Sidebar = ({ isClicked, onClose }) => {
                       onClick={onClose}
                       key={subIndex}
                       to={subItem?.path}
-                      className={`flex mb-4 justify-start text-start items-center rounded-lg ${locationHandler(subItem?.path)} hover:bg-blue-100  dark:hover:bg-dark dark:hover:border `}
+                      className={`flex my-2 gap-4 justify-start text-start items-center rounded-lg ${locationHandler(subItem?.path)} hover:bg-blue-100  dark:hover:bg-dark dark:hover:border `}
                     >
                       {subItem?.icon}
-                      <span className="ml-2 text-sm ">{subItem?.title}</span>
+                      <span className=" text-sm ">{subItem?.title}</span>
                     </Link>
                   ))}
                 </Panel>
@@ -69,7 +69,7 @@ const Sidebar = ({ isClicked, onClose }) => {
               <Link
                 onClick={onClose}
                 to={item?.path}
-                className={`flex justify-start text-start items-center ml-2  rounded-lg ${locationHandler(item?.path)} hover:bg-blue-100 dark:hover:bg-dark dark:hover:border`}
+                className={`flex justify-start text-start items-center  rounded-lg ${locationHandler(item?.path)} hover:bg-blue-100 dark:hover:bg-dark dark:hover:border`}
               >
                 <div className="w-[50px] h-[45px] rounded-full flex items-center justify-center">
                   {item?.icon}

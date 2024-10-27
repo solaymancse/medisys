@@ -11,18 +11,17 @@ import Setting from "../pages/setting/Setting";
 import MainLayout from "../pages/form/MainLayout";
 import PrivateRoute from "../components/privateRoute/PrivateRoute";
 import ForgotPassword from "../pages/forgetPassword/ForgetPassword";
+import Categories from "../pages/dashbboard/categories";
+import Brand from "../components/brands/Brand";
 
 export const route = createBrowserRouter([
     {
         path: "/",
         element: <Login />
-
-
     },
     {
         path: "/register",
         element: <SignUp />
-
     },
     {
         path: '/forgot-password',
@@ -37,8 +36,8 @@ export const route = createBrowserRouter([
                 element: <Home />
             },
             {
-                path: "/dashboard/tickets",
-                element: <Tickets />
+                path: "/dashboard/categories",
+                element: <Categories />
 
             },
             {
@@ -60,6 +59,10 @@ export const route = createBrowserRouter([
             {
                 path: "/dashboard/form",
                 element: <MainLayout />
+            },
+            {
+                path: "dashboard/brands",
+                element: <Brand />
             }
 
         ]

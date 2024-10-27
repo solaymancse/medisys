@@ -15,11 +15,11 @@ const Login = () => {
   const handleLogIn = async (e) => {
     e.preventDefault();
     try {
-      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      // const userCredential = await signInWithEmailAndPassword(auth, email, password);
 
-      const user = userCredential.user;
+      // const user = userCredential.user;
       // Save user data in local storage
-      localStorage.setItem('authUser', JSON.stringify(user));
+      // localStorage.setItem('authUser', JSON.stringify(user));
       navigate('/dashboard')
 
     } catch (error) {
