@@ -5,7 +5,6 @@ const CopyRight = () => {
     const editor = useRef(null);
     const [content, setContent] = useState('');
 
-    console.log('content', content)
 
     return (
         <div className="mt-6">

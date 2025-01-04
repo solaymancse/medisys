@@ -7,11 +7,9 @@ const RandomFormLayout = () => {
     const [form] = Form.useForm();
 
     const onFinish = (values) => {
-        console.log('Success:', values);
     };
 
     const onFinishFailed = (errorInfo) => {
-        console.log('Failed:', errorInfo);
     };
 
     return (

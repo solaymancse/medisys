@@ -1,5 +1,4 @@
 import { message, Popconfirm, Space, Table, Tag } from 'antd';
-import TableHeader from './tableHeader/TableHeader';
 import { RiDeleteBin6Line } from 'react-icons/ri';
 import { tableData } from '../../Data';
 import { useState } from 'react';
@@ -47,11 +46,9 @@ const columns = [
         render: () => {
 
             const confirm = (e) => {
-                console.log(e);
                 message.success('Successfully Deleted!');
             };
             const cancel = (e) => {
-                console.log(e);
                 message.error('Delete Canceled!');
             };
             return (
@@ -75,14 +72,12 @@ const columns = [
     },
 ];
 
-const Tables = () => {
+const Tables = ({ title, children, isModalOpen, setIsModalOpen }) => {
     const [filterData, setFilterData] = useState(tableData);
 
-    console.log(filterData)
     return (
         <>
-            <TableHeader setFilterData={setFilterData} tableData={tableData}/>
-            <Table  scroll={{ x: 600 }} columns={columns} dataSource={filterData} pagination={{ pageSize: 2 }} />
+            <Table scroll={{ x: 600 }} columns={columns} dataSource={filterData} pagination={{ pageSize: 2 }} />
         </>
     )
 };

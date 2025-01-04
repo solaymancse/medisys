@@ -1,13 +1,9 @@
-import { BiSolidPurchaseTag } from "react-icons/bi";
-import { CgProfile } from "react-icons/cg";
+import { BiSolidCapsule, BiSolidPurchaseTag } from "react-icons/bi";
 import { FaUsers } from "react-icons/fa";
-import { HiOutlineCurrencyDollar, HiOutlineMail } from "react-icons/hi";
-import { IoMdNotifications, IoMdSettings } from "react-icons/io";
-import { IoBarChartSharp } from "react-icons/io5";
-import { LuShoppingCart } from "react-icons/lu";
-import { MdOutlineLogout, MdProductionQuantityLimits, MdWidgets } from "react-icons/md";
+import { FaGear } from "react-icons/fa6";
+import { MdOutlineLogout } from "react-icons/md";
 import { RiDashboardHorizontalFill } from "react-icons/ri";
-import { TiContacts, TiTicket } from "react-icons/ti";
+import { TbCurrencyTaka } from "react-icons/tb";
 import { VscDebugBreakpointDataUnverified } from "react-icons/vsc";
 
 export const SidebarData = [
@@ -19,43 +15,12 @@ export const SidebarData = [
     {
         title: "Sell",
         path: "/blogs",
-        icon: <BiSolidPurchaseTag />,
+        icon: <TbCurrencyTaka size={22} />,
         isDropdown: true,
         subItems: [
             {
-                title: "Sales List",
-                icon: <VscDebugBreakpointDataUnverified />,
-            },
-            {
-                title: "List POS",
-                icon: <VscDebugBreakpointDataUnverified />,
-            },
-            {
                 title: "POS Sale",
-                icon: <VscDebugBreakpointDataUnverified />,
-            },
-            {
-                title: "Draft List",
-                icon: <VscDebugBreakpointDataUnverified />,
-            },
-            {
-                title: "Quotation List",
-                icon: <VscDebugBreakpointDataUnverified />,
-            },
-            {
-                title: "Sales Return List",
-                icon: <VscDebugBreakpointDataUnverified />,
-            },
-            {
-                title: "Shipment",
-                icon: <VscDebugBreakpointDataUnverified />,
-            },
-            {
-                title: "Discount",
-                icon: <VscDebugBreakpointDataUnverified />,
-            },
-            {
-                title: "Import Sales",
+                path: "/dashboard/sale",
                 icon: <VscDebugBreakpointDataUnverified />,
             },
         ]
@@ -63,37 +28,18 @@ export const SidebarData = [
     {
         title: "Products",
         path: "/products",
-        icon: <MdProductionQuantityLimits />,
+        icon: <BiSolidCapsule size={20} />,
         isDropdown: true,
         subItems: [
             {
-                title: "Product List",
-                path: "/dashboard/categories",
+                title: "Product",
+                path: "/dashboard/products",
                 icon: <VscDebugBreakpointDataUnverified />,
             },
-            {
-                title: "Print Labels",
-                path: "/dashboard/categories",
-                icon: <VscDebugBreakpointDataUnverified />,
-            },
-            {
-                title: "Variations",
-                path: "/dashboard/categories",
-                icon: <VscDebugBreakpointDataUnverified />,
-            },
-            {
-                title: "Import Opening Stock",
-                path: "/dashboard/categories",
-                icon: <VscDebugBreakpointDataUnverified />,
-            },
-            {
-                title: "Selling Price Group",
-                path: "/dashboard/categories",
-                icon: <VscDebugBreakpointDataUnverified />,
-            },
+
             {
                 title: "Units",
-                path: "/dashboard/categories",
+                path: "/dashboard/unit",
                 icon: <VscDebugBreakpointDataUnverified />,
             },
             {
@@ -103,24 +49,20 @@ export const SidebarData = [
             },
             {
                 title: "Brands",
-                path: "/brands",
-                icon: <VscDebugBreakpointDataUnverified />,
-            },
-            {
-                title: "Warranties",
-                path: "/brands",
+                path: "/dashboard/brands",
                 icon: <VscDebugBreakpointDataUnverified />,
             },
         ]
     },
     {
         title: "Purchase",
-        path: "/blogs",
-        icon: <BiSolidPurchaseTag />,
+        path: "/",
+        icon: <BiSolidPurchaseTag size={20} />,
         isDropdown: true,
         subItems: [
             {
                 title: "Purchase List",
+                path: "/dashboard/purchase",
                 icon: <VscDebugBreakpointDataUnverified />,
             },
             {
@@ -130,25 +72,19 @@ export const SidebarData = [
         ]
     },
     {
-        title: "Stock Transfer",
-        path: "/blogs",
-        icon: <BiSolidPurchaseTag />,
-        isDropdown: true,
-        subItems: [
-            {
-                title: "Post",
-                icon: <VscDebugBreakpointDataUnverified />,
-            },
-            {
-                title: "Details",
-                icon: <VscDebugBreakpointDataUnverified />,
-            },
-        ]
+        title: "Supplier",
+        path: "/dashboard/supplier",
+        icon: <BiSolidPurchaseTag size={20} />,
+    },
+    {
+        title: "Customer",
+        path: "/dashboard/customer",
+        icon: <BiSolidPurchaseTag size={20} />,
     },
     {
         title: "Stock Adjustment",
         path: "/blogs",
-        icon: <BiSolidPurchaseTag />,
+        icon: <BiSolidPurchaseTag size={20} />,
         isDropdown: true,
         subItems: [
             {
@@ -162,9 +98,9 @@ export const SidebarData = [
         ]
     },
     {
-        title: "Expense",
+        title: "Return",
         path: "/blogs",
-        icon: <BiSolidPurchaseTag />,
+        icon: <BiSolidPurchaseTag size={20} />,
         isDropdown: true,
         subItems: [
             {
@@ -181,7 +117,7 @@ export const SidebarData = [
     {
         title: "Reports",
         path: "/blogs",
-        icon: <BiSolidPurchaseTag />,
+        icon: <BiSolidPurchaseTag size={20} />,
         isDropdown: true,
         subItems: [
             {
@@ -195,33 +131,9 @@ export const SidebarData = [
         ]
     },
     {
-        title: "Contacts",
-        path: "/blogs",
-        icon: <BiSolidPurchaseTag />,
-        isDropdown: true,
-        subItems: [
-            {
-                title: "Suppliers",
-                icon: <VscDebugBreakpointDataUnverified />,
-            },
-            {
-                title: "Customers",
-                icon: <VscDebugBreakpointDataUnverified />,
-            },
-            {
-                title: "Customers Groups",
-                icon: <VscDebugBreakpointDataUnverified />,
-            },
-            {
-                title: "Import Contact",
-                icon: <VscDebugBreakpointDataUnverified />,
-            },
-        ]
-    },
-    {
         title: "User Management",
         path: "/blogs",
-        icon: <BiSolidPurchaseTag />,
+        icon: <BiSolidPurchaseTag size={20} />,
         isDropdown: true,
         subItems: [
             {
@@ -237,7 +149,7 @@ export const SidebarData = [
     {
         title: "Settings",
         path: "/users",
-        icon: <FaUsers />,
+        icon: <FaGear size={20} />,
         cName: "nav-text",
         isDropdown: true,
         subItems: [
@@ -263,7 +175,7 @@ export const SidebarData = [
     {
         title: "Logout",
         path: "/",
-        icon: <MdOutlineLogout />,
+        icon: <MdOutlineLogout size={20} />,
         cName: "nav-text",
     }
 ]

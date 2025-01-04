@@ -4,8 +4,8 @@ import CopyRight from "./copyRight/CopyRight";
 import RoleAndPermission from "./role&Permission/RoleAndPermission";
 
 const Setting = () => {
+
     const onChange = (key) => {
-        console.log(key);
     };
     const items = [
         {

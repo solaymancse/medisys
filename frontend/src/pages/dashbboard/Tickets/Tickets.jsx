@@ -57,11 +57,9 @@ const columns = [
     render: () => {
 
       const confirm = (e) => {
-        console.log(e);
         message.success('Successfully Deleted!');
       };
       const cancel = (e) => {
-        console.log(e);
         message.error('Delete Canceled!');
       };
       return (

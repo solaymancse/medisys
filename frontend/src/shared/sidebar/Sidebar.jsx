@@ -11,7 +11,7 @@ const { Panel } = Collapse;
 const Sidebar = ({ isClicked, onClose }) => {
   const [handleIsActiveIndex, setHandleIsActiveIndex] = useState(null);
   const location = useLocation();
-  const { themeColor,isDarkMode } = useSelector(selectTheme);
+  const { themeColor, isDarkMode } = useSelector(selectTheme);
 
 
   const locationHandler = (path) => {
@@ -67,15 +67,22 @@ const Sidebar = ({ isClicked, onClose }) => {
               </Collapse>
             ) : (
               <Link
-                onClick={onClose}
+                onClick={() => {
+                  if (item?.title === "Logout") {
+                    localStorage.removeItem('user'); // Clear all localStorage data
+                    // Alternatively, use localStorage.removeItem('specificKey') to remove specific data
+                  }
+                  onClose(); // Call the onClose function
+                }}
                 to={item?.path}
-                className={`flex justify-start text-start items-center  rounded-lg ${locationHandler(item?.path)} hover:bg-blue-100 dark:hover:bg-dark dark:hover:border`}
+                className={`flex justify-start text-start items-center rounded-lg ${locationHandler(item?.path)} hover:bg-blue-500 dark:hover:bg-dark dark:hover:border`}
               >
                 <div className="w-[50px] h-[45px] rounded-full flex items-center justify-center">
                   {item?.icon}
                 </div>
                 {!isClicked && <div className="flex text-sm justify-start text-start">{item.title}</div>}
               </Link>
+
             )}
           </div>
         ))}

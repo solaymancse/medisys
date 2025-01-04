@@ -1,7 +1,7 @@
 import { Modal } from 'antd';
 import { bool, node } from "prop-types";
 
-const Modals = ({ isModalOpen, setIsModalOpen, children }) => {
+const Modals = ({ isModalOpen, setIsModalOpen, children,width }) => {
 
 
   const handleOk = () => {
@@ -12,7 +12,7 @@ const Modals = ({ isModalOpen, setIsModalOpen, children }) => {
   };
   return (
 
-    <Modal open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
+    <Modal width={width} footer={null} open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
       {children}
     </Modal>
 

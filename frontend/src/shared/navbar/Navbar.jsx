@@ -1,23 +1,21 @@
 import { FiMenu } from "react-icons/fi";
-import { IoIosSearch } from "react-icons/io";
 import { IoMail } from "react-icons/io5";
 import { BsBellFill } from "react-icons/bs";
 import { useMediaQuery } from "react-responsive";
 import { useState } from "react";
 import MobileDrawer from "../../components/mobileDrawer/MobileDrawer";
-import SearchModal from "../../components/searchModal/SearchModal";
-import Language from "../../components/language/Language";
 import { bool } from 'prop-types';
-import HoverProfile from "./profile/HoverProfile";
 
-const Navbar = ({ isClicked, setIsClicked,isVerticalLayout }) => {
+const Navbar = ({ isClicked, setIsClicked, isVerticalLayout }) => {
   const [open, setOpen] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [, setIsModalOpen] = useState(false);
 
   const isLarge = useMediaQuery({ query: "(max-width: 1200px)" });
   const showDrawer = () => {
     setOpen(true);
   };
+
+  const user = JSON.parse(localStorage.getItem("user"));
 
   const showModal = () => {
     setIsModalOpen(true);
@@ -41,28 +39,13 @@ const Navbar = ({ isClicked, setIsClicked,isVerticalLayout }) => {
 
         <MobileDrawer open={open} setOpen={setOpen} />
 
-        <div onClick={showModal}>
-          {isLarge ? (
-            <IoIosSearch />
-          ) : (
-            <div className="flex items-center border border-slate-200 py-1 rounded-md px-6">
-              <input type="text" placeholder="Search" className="outline-none dark:bg-dark" />
-              <IoIosSearch />
-            </div>
-          )}
-        </div>
       </div>
 
-      <SearchModal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
 
       <div className="flex items-center gap-6">
-        <Language />
         <IoMail color="#777" />
         <BsBellFill color="#777" />
-
-        <HoverProfile />
-
-
+        <p>{user?.user?.name}</p>
       </div>
     </div>
   );

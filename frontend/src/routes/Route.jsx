@@ -2,17 +2,22 @@ import { createBrowserRouter } from "react-router-dom";
 import Dashboard from "../pages/dashbboard/Dashboard";
 import Login from "../pages/login/Login";
 import Home from "../pages/dashbboard/home/Home";
-import Chat from "../pages/dashbboard/Chat/Chat";
 import Pricing from "../pages/dashbboard/pricing/Pricing";
 import SignUp from "../pages/signup/signup";
-import Tables from "../pages/table/Tables";
-import Tickets from "../pages/dashbboard/Tickets/Tickets";
 import Setting from "../pages/setting/Setting";
 import MainLayout from "../pages/form/MainLayout";
 import PrivateRoute from "../components/privateRoute/PrivateRoute";
 import ForgotPassword from "../pages/forgetPassword/ForgetPassword";
 import Categories from "../pages/dashbboard/categories";
 import Brand from "../components/brands/Brand";
+import Unit from "../pages/dashbboard/unit/Unit";
+import Supplier from "../pages/dashbboard/supplier/Supplier";
+import Product from "../pages/dashbboard/product/Product";
+import Purchase from "../pages/dashbboard/purchase/Purchase";
+import Customer from "../pages/dashbboard/customer/Customer";
+import Sell from "../pages/dashbboard/sale/Sell";
+
+
 
 export const route = createBrowserRouter([
     {
@@ -29,7 +34,9 @@ export const route = createBrowserRouter([
     },
     {
         path: "/dashboard",
-        element: <Dashboard />,
+        element: <>
+            <Dashboard />
+        </>,
         children: [
             {
                 path: "/dashboard",
@@ -41,16 +48,24 @@ export const route = createBrowserRouter([
 
             },
             {
-                path: "/dashboard/chat",
-                element: <Chat />
+                path: "/dashboard/unit",
+                element: <Unit />
             },
             {
                 path: "/dashboard/pricing",
                 element: <Pricing />
             },
             {
-                path: "/dashboard/table",
-                element: <Tables />
+                path: "/dashboard/supplier",
+                element: <Supplier />
+            },
+            {
+                path: "/dashboard/products",
+                element: <Product />
+            },
+            {
+                path: "/dashboard/purchase",
+                element: <Purchase />
             },
             {
                 path: "/dashboard/settings",
@@ -61,8 +76,16 @@ export const route = createBrowserRouter([
                 element: <MainLayout />
             },
             {
-                path: "dashboard/brands",
+                path: "/dashboard/brands",
                 element: <Brand />
+            },
+            {
+                path: "/dashboard/customer",
+                element: <Customer />
+            },
+            {
+                path: "/dashboard/sale",
+                element: <Sell />
             }
 
         ]

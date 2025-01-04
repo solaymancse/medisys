@@ -4,6 +4,7 @@ import { route } from "./routes/Route";
 import { useSelector } from "react-redux";
 import { selectTheme } from "./features/theme/themeSlice";
 import { useEffect } from "react";
+import { ToastContainer } from "react-toastify";
 
 function App() {
 
@@ -18,7 +19,10 @@ function App() {
   }, [isDarkMode]);
 
   return (
-    <RouterProvider router={route} />
+    <>
+      <ToastContainer position="top-center" />
+      <RouterProvider router={route} />
+    </>
   );
 }
 
